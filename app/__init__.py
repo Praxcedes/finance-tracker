@@ -10,3 +10,4 @@ migrate = Migrate()
 jwt = JWTManager()
 
 def create_app():
+    app = Flask(__name__)
