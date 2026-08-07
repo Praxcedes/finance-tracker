@@ -24,3 +24,5 @@ def create_app():
  @app.route("/api/health")
     def health():
         return {"status": "ok"}
+
+        
