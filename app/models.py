@@ -16,3 +16,5 @@ class Category(db.Model):
     color = db.Column(db.String(7), default="#16a34a")
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     transactions = db.relationship("Transaction", backref="category", lazy=True)
+
+
