@@ -17,7 +17,6 @@ class Category(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     transactions = db.relationship("Transaction", backref="category", lazy=True)
 
-
 class Transaction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Float, nullable=False)
