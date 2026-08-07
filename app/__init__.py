@@ -6,3 +6,4 @@ from flask_cors import CORS
 from .config import Config
 
 db = SQLAlchemy()
+migrate = Migrate()
