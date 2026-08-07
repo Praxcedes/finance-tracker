@@ -20,3 +20,7 @@ def create_app():
 
 
  from . import models
+
+ @app.route("/api/health")
+    def health():
+        return {"status": "ok"}
