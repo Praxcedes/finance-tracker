@@ -13,16 +13,15 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-     db.init_app(app)
-     migrate.init_app(app, db)
-      jwt.init_app(app)
-          CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+    db.init_app(app)
+    migrate.init_app(app, db)
+    jwt.init_app(app)
+    CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
+    from . import models
 
- from . import models
-
- @app.route("/api/health")
+    @app.route("/api/health")
     def health():
         return {"status": "ok"}
 
-            return app
+    return app
