@@ -25,4 +25,4 @@ def create_app():
     def health():
         return {"status": "ok"}
 
-        
+            return app
