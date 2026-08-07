@@ -7,3 +7,4 @@ from .config import Config
 
 db = SQLAlchemy()
 migrate = Migrate()
+jwt = JWTManager()
