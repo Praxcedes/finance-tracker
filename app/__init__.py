@@ -18,3 +18,5 @@ def create_app():
       jwt.init_app(app)
           CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
+
+ from . import models
